@@ -8,5 +8,8 @@
     <param name="port" value="/dev/ttyUSB0"/>
     <param name="frame_id" value="base_scan"/>
   </node>
+  
+  <arg name="urdf_file" default="$(find xacro)/xacro --inorder '$(find description)/urdf/model.urdf.xacro'"/>
+  <param name="robot_description" command="$(arg urdf_file)"/>
 
 </launch>
